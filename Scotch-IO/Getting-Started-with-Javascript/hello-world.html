@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getting Started with Javascript</title>
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap 4 -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <style media="screen">
+    body {
+      padding:30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <h1>This is my site!</h1>
+    <button type="button" class="btn btn-primary" onclick="changeText()">
+      change the text
+    </button>
+    <button type="button" class="btn btn-primary" onclick="removeText()">
+      remove the text
+    </button>
+  </div>
+
+<script type="text/javascript">
+  function changeText() {
+    <!-- grab the h1 element and bind it to my variable "header" -->
+    const header = document.querySelector('h1');
+    <!-- make the text value of the first h1 element on the page become "my new text" -->
+    header.innerText = "my new text";
+  }
+  function removeText() {
+    <!-- grab the h1 element and bind it to my variable "header" -->
+    const header = document.querySelector('h1');
+    <!-- make the text value of the first h1 element on the page become "my new text" -->
+    header.innerText = "";
+  }
+</script>
+
+</body>
+</html>
