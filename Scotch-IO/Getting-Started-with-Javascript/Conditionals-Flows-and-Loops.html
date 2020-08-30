@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditionals, Flows, and Loops</title>
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap 4 -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <style media="screen">
+    body {
+      padding:30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- create a div for the data to populate into -->
+  <div class="notes-list"></div>
+
+<script type="text/javascript">
+
+
+  const notes = [
+    {
+      title: "Types and Variables",
+      note: "This course is better than Head First Javascript, and it's not even close",
+      url: "https://scotch.io/courses/getting-started-with-javascript-for-web-development/types-and-variables"
+    },
+    {
+      title: "Bootstrap 5: What's New About It",
+      note: "This article really does a much better job at explaining why Bootstrap is useful than the actual Bootstrap orgnization does on their own website",
+      url: "https://designmodo.com/bootstrap-5/"
+    }
+  ];
+
+  // create a querySelector for the for loop to send data into
+  const notesList = document.querySelector('.notes-list');
+  // this const needs to be created outside of the for loop
+
+  for (let i = 0; i<notes.length; i++) {
+    // grab the note
+    const note = notes[i];
+    const noteData = document.createElement('div');
+    noteData.innerText = note.note;
+    notesList.appendChild(noteData);
+  }
+
+
+</script>
+
+</body>
+</html>
