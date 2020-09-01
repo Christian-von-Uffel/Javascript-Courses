@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Conditionals, Flows, and Loops</title>
   <!-- Bootstrap 3 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <!-- Bootstrap 4 -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <style media="screen">
     body {
       padding:30px;
@@ -39,11 +39,35 @@
   const notesList = document.querySelector('.notes-list');
   // this const needs to be created outside of the for loop
 
-  for (let i = 0; i<notes.length; i++) {
-    // grab the note
-    const note = notes[i];
+  // for loop
+  // for (let i = 0; i<notes.length; i++) {
+  //   // grab the note
+  //   const note = notes[i];
+  //   const noteData = document.createElement('div');
+  //   noteData.innerText = note.note;
+  //   // alternative method using template string you can use to combine multiple key value elements
+  //   // noteData.innerText = `${note.note} created from ${note.title}`;
+  //   noteData.classList.add('jumbotron');
+  //   notesList.appendChild(noteData);
+  // }
+
+  // do while loop
+  // let i = 0
+  // do {
+  //   // grab the note
+  //   const note = notes[i];
+  //   const noteData = document.createElement('div');
+  //   noteData.innerText = note.note;
+  //   noteData.classList.add('jumbotron');
+  //   notesList.appendChild(noteData);
+  //   i++;
+  // } while (i<notes.length);
+
+  // for of loop
+  for (let note of notes){
     const noteData = document.createElement('div');
     noteData.innerText = note.note;
+    noteData.classList.add('jumbotron');
     notesList.appendChild(noteData);
   }
 
